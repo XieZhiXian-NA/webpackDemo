@@ -1,0 +1,30 @@
+{
+    "presets": [
+    [
+        "@babel/preset-env",//语法转换器 const---> var es6-->es5的转化规则
+        //配置@babel/polyfill   
+        {
+             "targets":{ "chrome":"67","edge":"17","firefox":"60","safari":"11.1"},
+             //@babel/polyfill Promise等还没有转化过来 使用polyfill把es6的新特性都装进来。弥补低版本浏览器中缺少的特性
+             //在项目中直接import @babel/polyfill 以全局变量的方式注入，会造成全局对象的污染
+             //useBuiltIns 告诉babel如何配置@babel/polyfill
+             // 1. entry:需要在webpack的入口文件里import @babel/polyfill一次，babel会根据使用情况导入垫片
+             //    项目中没有使用的功能不会被导入相应的垫片
+             // 2.usage:不需要import.全自动检测，但是要安装@babel/polyfill,并且不会造成全局变量污染，类似于babel-transform-runtime
+             // 3.false:如果你import @babel/fill 它不会排除掉没有用的垫片，程序体积会庞大 不推荐
+             "useBuiltIns":"usage",
+             "corejs":2
+    }],
+    "@babel/preset-react"]
+// ]
+    // "plugins": [[
+    //     "@babel/plugin-transform-runtime", //引入不是挂载到window上成全局对象
+    //     {
+    //         "absoluteRuntime":false,
+    //         "corejs":2,
+    //         "helpers":true,
+    //         "regenerator":true,
+    //         "useESModules":false
+    //     }
+    // ]]
+}
