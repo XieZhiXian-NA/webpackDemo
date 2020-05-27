@@ -18,6 +18,7 @@
     "@babel/preset-react"]
 // ]
     // "plugins": [[
+        //@babel/plugin-transform-runtime 是一个可以重复使用 Babel 注入的帮助程序，以节省代码大小的插件。
     //     "@babel/plugin-transform-runtime", //引入不是挂载到window上成全局对象
     //     {
     //         "absoluteRuntime":false,

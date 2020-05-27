@@ -1,0 +1,25 @@
+{
+  "name": "webpackByHands",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "bin": {
+    "xlx-pack": "./bin/xlx-pack.js"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@babel/generator": "^7.9.6",
+    "@babel/parser": "^7.9.6",
+    "@babel/traverse": "^7.9.6",
+    "@babel/types": "^7.9.6",
+    "babylon": "^6.18.0",
+    "ejs": "^3.1.3",
+    "less": "^3.11.1",
+    "tapable": "^1.1.3"
+  }
+}

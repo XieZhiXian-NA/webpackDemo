@@ -10,7 +10,8 @@ const entry=(filename)=>{
       sourceType:'module'
   })
   //dp:{'./a.js':'./src/a.js'}
-  const dp ={}
+  const dp ={} 
+  // traverse and update nodes:
   traverse(Ast,{
       //将语法书的import类型的拿出来 import a from './a.js'
       ImportDeclaration({node}){

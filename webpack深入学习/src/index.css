@@ -1,0 +1,7 @@
+body  {
+  background: rgb(126, 156, 221);
+  
+}
+h1{
+    transform: rotate(45deg);
+}
